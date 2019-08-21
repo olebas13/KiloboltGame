@@ -6,7 +6,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.net.URL;
 
-public class StartingClass extends Applet implements Runnable, KeyListener {
+public class StartingClass extends Applet implements KeyListener, Runnable{
 
     private Robot robot;
     private Image image;
@@ -16,19 +16,21 @@ public class StartingClass extends Applet implements Runnable, KeyListener {
 
     @Override
     public void init() {
-        setSize(800, 400);
+        setSize(800, 480);
         setBackground(Color.BLACK);
         setFocusable(true);
         addKeyListener(this);
         Frame frame = (Frame) this.getParent().getParent();
         frame.setTitle("Q-Bot Alpha");
         try {
-            base = getDocumentBase();
+            base = StartingClass.class.getResource("/data/");
+            System.out.println(base);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        character = getImage(base, "data/character.png");
+        character = getImage(base, "character.png");
+        System.out.println(character);
     }
 
     @Override
