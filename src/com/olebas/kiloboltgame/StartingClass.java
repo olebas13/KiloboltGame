@@ -10,9 +10,16 @@ public class StartingClass extends Applet implements KeyListener, Runnable{
 
     private Robot robot;
     private Image image;
+    private Image currentSprite;
     private Image character;
+    private Image characterDown;
+    private Image characterJumped;
+    private Image background;
     private Graphics second;
     private URL base;
+
+    private static Background bg1;
+    private static Background bg2;
 
     @Override
     public void init() {
@@ -24,17 +31,21 @@ public class StartingClass extends Applet implements KeyListener, Runnable{
         frame.setTitle("Q-Bot Alpha");
         try {
             base = StartingClass.class.getResource("/data/");
-            System.out.println(base);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         character = getImage(base, "character.png");
-        System.out.println(character);
+        characterDown = getImage(base, "down.png");
+        characterJumped = getImage(base, "jumped.png");
+        currentSprite = character;
+        background = getImage(base, "background.png");
     }
 
     @Override
     public void start() {
+        bg1 = new Background(0, 0);
+        bg2 = new Background(2160, 0);
         robot = new Robot();
         Thread thread = new Thread(this);
         thread.start();
@@ -53,6 +64,14 @@ public class StartingClass extends Applet implements KeyListener, Runnable{
     @Override
     public void run() {
         while (true) {
+            robot.update();
+            if (robot.isJumped()) {
+                currentSprite = characterJumped;
+            } else if (!robot.isJumped() && !robot.isDucked()) {
+                currentSprite = character;
+            }
+            bg1.update();
+            bg2.update();
             repaint();
 //            System.out.println("repaint");
             try {
@@ -80,7 +99,9 @@ public class StartingClass extends Applet implements KeyListener, Runnable{
 
     @Override
     public void paint(Graphics g) {
-        g.drawImage(character, robot.getCenterX() - 61, robot.getCenterY() - 63, this);
+        g.drawImage(background, bg1.getBgX(), bg1.getBgY(), this);
+        g.drawImage(background, bg2.getBgX(), bg2.getBgY(), this);
+        g.drawImage(currentSprite, robot.getCenterX() - 61, robot.getCenterY() - 63, this);
     }
 
     @Override
@@ -95,16 +116,22 @@ public class StartingClass extends Applet implements KeyListener, Runnable{
                 System.out.println("Move up");
                 break;
             case KeyEvent.VK_DOWN:
-                System.out.println("Move down");
+                currentSprite = characterDown;
+                if (!robot.isJumped()) {
+                    robot.setDucked(true);
+                    robot.setSpeedX(0);
+                }
                 break;
             case KeyEvent.VK_LEFT:
-                System.out.println("Move left");
+                robot.moveLeft();
+                robot.setMovingLeft(true);
                 break;
             case KeyEvent.VK_RIGHT:
-                System.out.println("Move right");
+                robot.moveRight();
+                robot.setMovingRight(true);
                 break;
             case KeyEvent.VK_SPACE:
-                System.out.println("Jump");
+                robot.jump();
                 break;
         }
     }
@@ -116,17 +143,25 @@ public class StartingClass extends Applet implements KeyListener, Runnable{
                 System.out.println("Stop moving up");
                 break;
             case KeyEvent.VK_DOWN:
-                System.out.println("Stop moving down");
+                currentSprite = character;
+                robot.setDucked(false);
                 break;
             case KeyEvent.VK_LEFT:
-                System.out.println("Stop moving left");
-                break;
+                robot.stopLeft();
             case KeyEvent.VK_RIGHT:
-                System.out.println("Stop moving right");
+                robot.stopRight();
                 break;
             case KeyEvent.VK_SPACE:
-                System.out.println("Stop jumping");
                 break;
         }
     }
+
+    public static Background getBg1() {
+        return bg1;
+    }
+
+    public static Background getBg2() {
+        return bg2;
+    }
+
 }
