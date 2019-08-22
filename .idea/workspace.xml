@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6916d3c1-3cc6-43e3-a183-cee69c501a67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/olebas/kiloboltgame/Background.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/olebas/kiloboltgame/Enemy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/olebas/kiloboltgame/Heliboy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -11,11 +11,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KiloboltGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/KiloboltGame.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KiloboltGame/com/olebas/kiloboltgame/StartingClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KiloboltGame/data/character.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/olebas/kiloboltgame/Background.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/olebas/kiloboltgame/Background.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/olebas/kiloboltgame/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/olebas/kiloboltgame/Robot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/olebas/kiloboltgame/StartingClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/olebas/kiloboltgame/StartingClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/background.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/character.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/character.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/down.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/down.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/jumped.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/jumped.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +47,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/data" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -96,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1566302375204</updated>
       <workItem from="1566302382639" duration="8006000" />
-      <workItem from="1566372035005" duration="17056000" />
+      <workItem from="1566372035005" duration="20754000" />
     </task>
     <servers />
   </component>
