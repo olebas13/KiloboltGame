@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6916d3c1-3cc6-43e3-a183-cee69c501a67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/olebas/kiloboltgame/Enemy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/olebas/kiloboltgame/Heliboy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/olebas/kiloboltgame/Projectile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/olebas/kiloboltgame/framework/Animation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -12,11 +12,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KiloboltGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/KiloboltGame.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/olebas/kiloboltgame/Background.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/olebas/kiloboltgame/Background.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/olebas/kiloboltgame/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/olebas/kiloboltgame/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/olebas/kiloboltgame/Heliboy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/olebas/kiloboltgame/Heliboy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/olebas/kiloboltgame/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/olebas/kiloboltgame/Robot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/olebas/kiloboltgame/StartingClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/olebas/kiloboltgame/StartingClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/background.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/character.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/character.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/down.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/down.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/heliboy.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/heliboy.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/jumped.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/jumped.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,11 +48,15 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/data" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -99,7 +106,11 @@
       <option name="presentableId" value="Default" />
       <updated>1566302375204</updated>
       <workItem from="1566302382639" duration="8006000" />
-      <workItem from="1566372035005" duration="20754000" />
+      <workItem from="1566372035005" duration="21235000" />
+      <workItem from="1566483701702" duration="842000" />
+      <workItem from="1566543125227" duration="6776000" />
+      <workItem from="1567071593036" duration="4358000" />
+      <workItem from="1567081588219" duration="944000" />
     </task>
     <servers />
   </component>

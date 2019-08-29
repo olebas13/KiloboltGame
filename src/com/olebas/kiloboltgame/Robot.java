@@ -1,5 +1,8 @@
 package com.olebas.kiloboltgame;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Robot {
 
     private final int JUMP_SPEED = -15;
@@ -18,6 +21,8 @@ public class Robot {
 
     private int speedX = 0;
     private int speedY = 1;
+
+    private List<Projectile> projectiles = new ArrayList<>();
 
     public void update() {
 
@@ -106,6 +111,11 @@ public class Robot {
         }
     }
 
+    public void shoot() {
+        Projectile projectile = new Projectile(centerX + 50, centerY - 25);
+        projectiles.add(projectile);
+    }
+
     public int getCenterX() {
         return centerX;
     }
@@ -144,6 +154,10 @@ public class Robot {
 
     public void setSpeedY(int speedY) {
         this.speedY = speedY;
+    }
+
+    public List<Projectile> getProjectiles() {
+        return projectiles;
     }
 
     public boolean isMovingLeft() {
