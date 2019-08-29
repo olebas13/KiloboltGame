@@ -13,6 +13,8 @@ public class StartingClass extends Applet implements KeyListener, Runnable{
 
     public final static int SCREEN_WIDTH = 800;
     public final static int SCREEN_HEIGHT = 480;
+    public static Image tileocean;
+    public static Image tiledirt;
 
     private Robot robot;
     private Heliboy hb;
