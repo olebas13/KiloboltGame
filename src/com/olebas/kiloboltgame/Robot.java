@@ -41,8 +41,8 @@ public class Robot {
         }
 
         if (speedX > 0 && centerX > 200) {
-            bg1.setSpeedX(-MOVE_SPEED);
-            bg2.setSpeedX(-MOVE_SPEED);
+            bg1.setSpeedX(-MOVE_SPEED / 5);
+            bg2.setSpeedX(-MOVE_SPEED / 5);
         }
 
         // Update Y position
